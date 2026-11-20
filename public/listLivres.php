@@ -18,6 +18,7 @@ $livres = [
         'auteur' => 'George Orwell',
         'genre' => 'Dystopie',
         'annee' => 1949,
+        
         'disponible' => false
     ],
     [
@@ -29,6 +30,21 @@ $livres = [
     ]
 ];
 ?>
+
+<?php foreach ($livres as $livre) { ?>
+
+        <h2><?= $livre['titre'] ?></h2>
+        <p>Auteur : <?= $livre['auteur'] ?></p>
+        <p>Genre : <?= $livre['genre'] ?></p>
+        <p>Année : <?= $livre['annee'] ?></p>
+
+        <?php if ($livre['disponible']) { ?>
+            <p>Disponible</p>
+        <?php } else { ?>
+            <p>Indisponible</p>
+        <?php } ?>
+
+    <?php } ?>
 
 <!DOCTYPE html>
 <html lang="fr">
